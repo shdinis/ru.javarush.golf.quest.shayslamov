@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "answerText": "Принять вызов",
+    "nextQuestion": 2
+  },
+  {
+    "id": 2,
+    "answerText": "Отклонить вызов",
+    "nextQuestion": 4
+  },
+  {
+    "id": 3,
+    "answerText": "Подняться на мостик",
+    "nextQuestion": 3
+  },
+  {
+    "id": 4,
+    "answerText": "Отказаться подниматься на мостик",
+    "nextQuestion": 5
+  },
+  {
+    "id": 5,
+    "answerText": "Рассказать правду о себе",
+    "nextQuestion": 7
+  },
+  {
+    "id": 6,
+    "answerText": "Солгать о себе",
+    "nextQuestion": 6
+  }
+]
