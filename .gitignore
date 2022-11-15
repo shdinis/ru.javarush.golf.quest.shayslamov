@@ -1,0 +1,11 @@
+
+# Default ignored files
+.mvn/
+mvnw/
+mvnw.cmd
+.idea/
+*.iml
+/target
+/target/
+*.txt
+/src/tmp.java
