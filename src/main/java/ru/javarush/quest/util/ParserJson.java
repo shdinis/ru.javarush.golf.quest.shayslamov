@@ -2,6 +2,7 @@ package ru.javarush.quest.util;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Getter;
 import ru.javarush.quest.entity.Answer;
 import ru.javarush.quest.entity.AnswerRepository;
 import ru.javarush.quest.entity.Question;
@@ -14,9 +15,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ParserJson {
 
+public class ParserJson {
     private QuestionRepository questionRepository;
+
     private AnswerRepository answerRepository;
 
     public QuestionRepository getInstanceQuestionRepo(File file) {

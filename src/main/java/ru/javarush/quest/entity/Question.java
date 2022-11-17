@@ -11,16 +11,15 @@ import java.util.List;
 @Getter
 @JsonTypeName
 public class Question {
-
     @JsonProperty("id")
     private final Long id;
+
     @JsonProperty("questionText")
     private final String questionText;
     @JsonProperty("idAnswer")
     private final List<Long> idAnswer;
     @JsonProperty("backgroundPicture")
     private final String backgroundPicture;
-
     public Question(@JsonProperty(value = "id") Long id,
                     @JsonProperty(value = "questionText") String questionText,
                     @JsonProperty(value = "idAnswer") List<Long> idAnswer,
@@ -29,5 +28,17 @@ public class Question {
         this.questionText = questionText;
         this.idAnswer = idAnswer;
         this.backgroundPicture = backgroundPicture;
+    }
+
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public List<Long> getIdAnswer() {
+        return idAnswer;
+    }
+
+    public String getBackgroundPicture() {
+        return backgroundPicture;
     }
 }

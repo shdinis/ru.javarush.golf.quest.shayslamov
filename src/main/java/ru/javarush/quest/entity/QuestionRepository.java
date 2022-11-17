@@ -1,7 +1,6 @@
 package ru.javarush.quest.entity;
 
 import java.util.Map;
-import java.util.Optional;
 
 public class QuestionRepository {
     private final Map<Long, Question> idToQuestion;
@@ -10,7 +9,7 @@ public class QuestionRepository {
         this.idToQuestion = idToQuestion;
     }
 
-    Optional<Question> findById(Long id) {
-        return Optional.ofNullable(idToQuestion.get(id));
+    public Question findById(Long id) {
+        return idToQuestion.get(id);
     }
 }
