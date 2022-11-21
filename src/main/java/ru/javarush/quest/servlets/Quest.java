@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "quest", value = "/quest")
-public class quest extends HttpServlet {
+public class Quest extends HttpServlet {
 
     private Integer countForGame;
 

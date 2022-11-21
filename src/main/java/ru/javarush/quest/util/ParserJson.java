@@ -2,14 +2,10 @@ package ru.javarush.quest.util;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Getter;
-import ru.javarush.quest.entity.Answer;
-import ru.javarush.quest.entity.AnswerRepository;
-import ru.javarush.quest.entity.Question;
-import ru.javarush.quest.entity.QuestionRepository;
+import ru.javarush.quest.entity.*;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,25 +13,45 @@ import java.util.Map;
 
 
 public class ParserJson {
-    private QuestionRepository questionRepository;
 
+    private static ParserJson parserJson = new ParserJson();
+    private QuestionRepository questionRepository;
     private AnswerRepository answerRepository;
 
-    public QuestionRepository getInstanceQuestionRepo(File file) {
+    private UserRepository userRepository;
+
+private ParserJson(){
+
+}
+
+public static ParserJson getInstance(){
+    if (parserJson==null){
+        parserJson = new ParserJson();
+    }
+    return  parserJson;
+}
+    public QuestionRepository getInstanceQuestionRepo(InputStream file) {
         if (this.questionRepository == null) {
             this.questionRepository = readJsonQuestionFile(file);
         }
         return questionRepository;
     }
 
-    public AnswerRepository getInstanceAnswerRepo(File file) {
+    public AnswerRepository getInstanceAnswerRepo(InputStream file) {
         if (this.answerRepository == null) {
             this.answerRepository = readJsonAnswerFile(file);
         }
         return this.answerRepository;
     }
 
-    private QuestionRepository readJsonQuestionFile(File file) {
+    public UserRepository getInstanceUserRepository(InputStream file){
+    if (this.userRepository==null){
+        this.userRepository = readJsonUserFile(file);
+    }
+    return this.userRepository;
+    }
+
+    private QuestionRepository readJsonQuestionFile(InputStream file) {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Question> initialQuestionFromJson;
         try {
@@ -52,8 +68,7 @@ public class ParserJson {
         return new QuestionRepository(result);
     }
 
-
-    private AnswerRepository readJsonAnswerFile(File file) {
+    private AnswerRepository readJsonAnswerFile(InputStream file) {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Answer> initialAnswerFromJson;
         try {
@@ -68,5 +83,25 @@ public class ParserJson {
             result.put(answer.getId(), answer);
         }
         return new AnswerRepository(result);
+    }
+
+    private UserRepository readJsonUserFile(InputStream file) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<User> initialUserFromJson;
+        try {
+            initialUserFromJson = objectMapper.readValue(file, new TypeReference<ArrayList<User>>() {
+            });
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+            Map<Long,User> result = new HashMap<>();
+        for (User user : initialUserFromJson) {
+            result.put(user.getId(), user);
+        }
+        return new UserRepository(result);
+    }
+
+    public void updateUserFromJsonFile(User user) {
+
     }
 }

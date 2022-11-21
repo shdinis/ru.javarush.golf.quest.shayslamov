@@ -10,9 +10,13 @@
 <div>
     <h1>${questions.findById(questionId).getQuestionText()}</h1>
     <c:forEach var="idAnswer" items="${questions.findById(questionId).getIdAnswer()}">
-        <button onclick="window.location='/quest?click=${idAnswer}'">${answers.findById(idAnswer).getAnswerText()}</button>
+        <button onclick="window.location='/quest?click=${answers.findById(idAnswer).getNextQuestion()}'">${answers.findById(idAnswer).getAnswerText()}</button>
         <br>
     </c:forEach>
+
+    <c:if test="${questions.findById(questionId).getIdAnswer().isEmpty()}">
+        <button onclick="window.location='/quest?click=1'">Начать с начала</button>
+    </c:if>
 </div>
 </body>
 </html>
