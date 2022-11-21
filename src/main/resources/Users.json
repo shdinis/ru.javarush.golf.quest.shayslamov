@@ -3,6 +3,12 @@
     "id": 1,
     "name": "Gus",
     "password": "1",
-    "countOfPlayedGames": 1
+    "countOfPlayedGames": 0
+  },
+  {
+    "id": 2,
+    "name": "1",
+    "password": "1",
+    "countOfPlayedGames": 0
   }
 ]

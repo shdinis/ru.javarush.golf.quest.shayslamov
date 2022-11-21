@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "quest", value = "/quest")
-public class Quest extends HttpServlet {
+public class QuestServlet extends HttpServlet {
 
     private Integer countForGame;
 
@@ -19,7 +19,6 @@ public class Quest extends HttpServlet {
 
         getServletContext().getRequestDispatcher("/quest.jsp").forward(request, response);
     }
-
 
     private int getSelectedIndex(HttpServletRequest request) {
         String click = request.getParameter("click");

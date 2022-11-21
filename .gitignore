@@ -9,3 +9,4 @@ mvnw.cmd
 /target/
 *.txt
 /src/tmp.java
+log4j2.xml

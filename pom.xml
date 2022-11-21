@@ -16,6 +16,13 @@
         <maven.compiler.source>11</maven.compiler.source>
         <junit.version>5.8.2</junit.version>
         <javax.servlet-api>4.0.1</javax.servlet-api>
+        <javax.servlet>1.2</javax.servlet>
+        <org.projectlombok>1.18.22</org.projectlombok>
+        <jackson-databind>2.13.4.2</jackson-databind>
+        <jackson-annotations>2.13.4</jackson-annotations>
+        <jackson-core>2.13.4</jackson-core>
+        <maven-war-plugin>3.3.2</maven-war-plugin>
+        <jacoco-maven-plugin>0.8.8</jacoco-maven-plugin>
     </properties>
 
     <dependencies>
@@ -27,7 +34,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${javax.servlet}</version>
         </dependency>
 
         <dependency>
@@ -45,29 +52,29 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>${org.projectlombok}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>${org.projectlombok}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.4.2</version>
+            <version>${jackson-databind}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.13.4</version>
+            <version>${jackson-annotations}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.13.4</version>
+            <version>${jackson-core}</version>
         </dependency>
 
     </dependencies>
@@ -77,12 +84,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
+                <version>${maven-war-plugin}</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
+                <version>${jacoco-maven-plugin}</version>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
@@ -109,7 +116,7 @@
                                         <limit>
                                             <counter>COMPLEXITY</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.60</minimum>
+                                            <minimum>0.95</minimum>
                                         </limit>
                                     </limits>
                                 </rule>

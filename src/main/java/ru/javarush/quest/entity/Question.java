@@ -29,16 +29,4 @@ public class Question {
         this.idAnswer = idAnswer;
         this.backgroundPicture = backgroundPicture;
     }
-//
-//    public String getQuestionText() {
-//        return questionText;
-//    }
-//
-//    public List<Long> getIdAnswer() {
-//        return idAnswer;
-//    }
-//
-//    public String getBackgroundPicture() {
-//        return backgroundPicture;
-//    }
 }

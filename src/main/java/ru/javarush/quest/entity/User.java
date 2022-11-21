@@ -14,7 +14,7 @@ public class User {
     private String name;
     @JsonProperty("password")
     private String password;
-    @JsonProperty("countOfGame")
+    @JsonProperty("countOfPlayedGames")
     private Long countOfPlayedGames;
 
     public User(@JsonProperty(value = "id") Long id,

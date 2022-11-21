@@ -6,7 +6,7 @@
       1,
       2
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\input.JPG"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
       3,
       4
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\entered.JPG"
   },
   {
     "id": 3,
@@ -24,34 +24,34 @@
       5,
       6
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\whoAreYou.JPG"
   },
   {
     "id": 4,
     "questionText": "Ты отклонил вызов. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\defeat3.JPG"
   },
   {
     "id": 5,
     "questionText": "Ты не прошел на переговоры. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\defeat3.JPG"
   },
   {
     "id": 6,
     "questionText": "Твою ложь разоблачили. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\defeat.JPG"
   },
   {
     "id": 7,
     "questionText": "Тебя вернули домой. Победа",
     "idAnswer": [
     ],
-    "backgroundPicture": ""
+    "backgroundPicture": "\\static\\img\\win.JPG"
   }
 ]

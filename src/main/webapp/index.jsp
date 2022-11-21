@@ -14,8 +14,6 @@
             <div>
 
                 <h1>Приветствие</h1>
-<%--                <button onclick="location.href='/login'">Начнем</button>--%>
-
 
             </div>
             <form action="login" method="post">
@@ -36,7 +34,7 @@
                                placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
                 </c:if>
             </form>
         </main>
