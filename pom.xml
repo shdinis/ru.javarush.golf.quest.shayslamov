@@ -15,6 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
         <junit.version>5.8.2</junit.version>
+        <mockito-junit-jupiter>4.2.0</mockito-junit-jupiter>
         <javax.servlet-api>4.0.1</javax.servlet-api>
         <javax.servlet>1.2</javax.servlet>
         <org.projectlombok>1.18.22</org.projectlombok>
@@ -23,6 +24,7 @@
         <jackson-core>2.13.4</jackson-core>
         <maven-war-plugin>3.3.2</maven-war-plugin>
         <jacoco-maven-plugin>0.8.8</jacoco-maven-plugin>
+        <maven-surefire-plugin>3.0.0-M6</maven-surefire-plugin>
     </properties>
 
     <dependencies>
@@ -47,6 +49,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito-junit-jupiter}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -90,15 +98,21 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco-maven-plugin}</version>
+                <configuration>
+                    <excludes>
+                        **/controller/*
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>default-prepare-agent</id>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>default-report</id>
+                        <id>report</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -116,7 +130,7 @@
                                         <limit>
                                             <counter>COMPLEXITY</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.95</minimum>
+                                            <minimum>0.0</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -125,7 +139,11 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin}</version>
+            </plugin>
         </plugins>
     </build>
 </project>

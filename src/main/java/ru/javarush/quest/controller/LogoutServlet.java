@@ -1,4 +1,4 @@
-package ru.javarush.quest.servlets;
+package ru.javarush.quest.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

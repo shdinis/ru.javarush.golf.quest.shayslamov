@@ -1,32 +1,30 @@
-[
-  {
-    "id": 1,
-    "answerText": "Принять вызов",
+{
+  "1": {
+    "answerText": "Принять помощь",
     "nextQuestion": 2
   },
-  {
-    "id": 2,
-    "answerText": "Отклонить вызов",
+  "2": {
+    "answerText": "Отклонить помощь",
     "nextQuestion": 4
   },
-  {
-    "id": 3,
+  "3": {
     "answerText": "Подняться на мостик",
     "nextQuestion": 3
   },
-  {
-    "id": 4,
+  "4": {
     "answerText": "Отказаться подниматься на мостик",
     "nextQuestion": 5
   },
-  {
-    "id": 5,
+  "5": {
     "answerText": "Рассказать правду о себе",
     "nextQuestion": 7
   },
-  {
-    "id": 6,
+  "6": {
     "answerText": "Солгать о себе",
     "nextQuestion": 6
+  },
+  "7":{
+    "answerText": "Начать с начала?",
+    "nextQuestion": 1
   }
-]
+}

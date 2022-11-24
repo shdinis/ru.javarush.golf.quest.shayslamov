@@ -1,57 +1,50 @@
-[
-  {
-    "id": 1,
-    "questionText": "Ты потерял память. Принять вызов НЛО?",
+{
+  "1": {
+    "questionText": "Ты потерял память. Тебе предлагают помощь",
     "idAnswer": [
       1,
       2
     ],
-    "backgroundPicture": "\\static\\img\\input.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 2,
-    "questionText": "Ты принял вызов.Поднимаешься на мостик к капитану?",
+  "2": {
+    "questionText": "Ты согласился.Поднимаешься на мостик к капитану?",
     "idAnswer": [
       3,
       4
     ],
-    "backgroundPicture": "\\static\\img\\entered.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 3,
+  "3": {
     "questionText": "Ты поднялся на мостик. Ты кто?",
     "idAnswer": [
       5,
       6
     ],
-    "backgroundPicture": "\\static\\img\\whoAreYou.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 4,
-    "questionText": "Ты отклонил вызов. Поражение",
+  "4": {
+    "questionText": "Ты отклонил помощь. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": "\\static\\img\\defeat3.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 5,
-    "questionText": "Ты не прошел на переговоры. Поражение",
+  "5": {
+    "questionText": "Ты не прошел на мостик. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": "\\static\\img\\defeat3.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 6,
+  "6": {
     "questionText": "Твою ложь разоблачили. Поражение",
     "idAnswer": [
     ],
-    "backgroundPicture": "\\static\\img\\defeat.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   },
-  {
-    "id": 7,
+  "7": {
     "questionText": "Тебя вернули домой. Победа",
     "idAnswer": [
     ],
-    "backgroundPicture": "\\static\\img\\win.JPG"
+    "backgroundPicture": "\\static\\img\\background.jpg"
   }
-]
+}
