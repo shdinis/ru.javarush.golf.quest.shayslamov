@@ -1,0 +1,30 @@
+{
+  "1": {
+    "answerText": "Принять помощь",
+    "nextQuestion": 2
+  },
+  "2": {
+    "answerText": "Отклонить помощь",
+    "nextQuestion": 4
+  },
+  "3": {
+    "answerText": "Подняться на мостик",
+    "nextQuestion": 3
+  },
+  "4": {
+    "answerText": "Отказаться, настоять на своем",
+    "nextQuestion": 5
+  },
+  "5": {
+    "answerText": "Рассказать правду о себе",
+    "nextQuestion": 7
+  },
+  "6": {
+    "answerText": "Солгать о себе",
+    "nextQuestion": 6
+  },
+  "7":{
+    "answerText": "Начать с начала?",
+    "nextQuestion": 1
+  }
+}

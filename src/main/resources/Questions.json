@@ -1,0 +1,50 @@
+{
+  "1": {
+    "questionText": "Ты потерял память. Тебе предлагают помощь",
+    "idAnswer": [
+      1,
+      2
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "2": {
+    "questionText": "Ты согласился.Поднимешься на мостик к капитану?",
+    "idAnswer": [
+      3,
+      4
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "3": {
+    "questionText": "Ты поднялся на мостик. Тебя начали расспрашивать?",
+    "idAnswer": [
+      5,
+      6
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "4": {
+    "questionText": "Ты отклонил помощь. Поражение",
+    "idAnswer": [
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "5": {
+    "questionText": "Ты не прошел на мостик. Поражение",
+    "idAnswer": [
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "6": {
+    "questionText": "Твою ложь разоблачили. Поражение",
+    "idAnswer": [
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  },
+  "7": {
+    "questionText": "Тебя вернули домой. Победа",
+    "idAnswer": [
+    ],
+    "backgroundPicture": "\\static\\img\\background.jpg"
+  }
+}
