@@ -2,12 +2,14 @@ package ru.javarush.quest.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString
 @JsonTypeName
+@EqualsAndHashCode
 public class Answer {
 
     @JsonProperty("answerText")

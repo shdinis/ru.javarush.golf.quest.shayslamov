@@ -8,7 +8,7 @@
     "backgroundPicture": "\\static\\img\\background.jpg"
   },
   "2": {
-    "questionText": "Ты согласился.Поднимаешься на мостик к капитану?",
+    "questionText": "Ты согласился.Поднимешься на мостик к капитану?",
     "idAnswer": [
       3,
       4
@@ -16,7 +16,7 @@
     "backgroundPicture": "\\static\\img\\background.jpg"
   },
   "3": {
-    "questionText": "Ты поднялся на мостик. Ты кто?",
+    "questionText": "Ты поднялся на мостик. Тебя начали расспрашивать?",
     "idAnswer": [
       5,
       6

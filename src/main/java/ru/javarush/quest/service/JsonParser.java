@@ -14,32 +14,28 @@ public class JsonParser {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public Map<Long, Question> parseQuestion(String file) {
+    public Map<Long, Question> parseQuestion(InputStream file) {
 
         Map<Long, Question> result;
 
         try {
-            result = objectMapper.readValue(getFilePath(file), new TypeReference<HashMap<Long, Question>>() {
+            result = objectMapper.readValue(file, new TypeReference<HashMap<Long, Question>>() {
             });
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to parse the file with questions for the quest");
         }
         return result;
     }
 
-    public Map<Long, Answer> parseAnswer(String file){
+    public Map<Long, Answer> parseAnswer(InputStream file){
         Map<Long, Answer> result;
 
         try {
-            result = objectMapper.readValue(getFilePath(file), new TypeReference<HashMap<Long, Answer>>() {
+            result = objectMapper.readValue(file, new TypeReference<HashMap<Long, Answer>>() {
             });
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to parse quest answer file");
         }
         return result;
-    }
-
-    public InputStream getFilePath(String file) {
-        return JsonParser.class.getClassLoader().getResourceAsStream(file);
     }
 }

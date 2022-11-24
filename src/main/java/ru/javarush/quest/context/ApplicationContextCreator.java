@@ -1,5 +1,6 @@
 package ru.javarush.quest.context;
 
+import lombok.EqualsAndHashCode;
 import ru.javarush.quest.entity.Answer;
 import ru.javarush.quest.entity.Question;
 import ru.javarush.quest.repository.AnswerRepository;
@@ -12,18 +13,16 @@ import ru.javarush.quest.service.JsonParser;
 import java.util.List;
 import java.util.Optional;
 
+@EqualsAndHashCode
 public class ApplicationContextCreator {
     private final JsonParser jsonParser = new JsonParser();
 
     private final AnswerRepository answerRepository =
-            new InMemoryAnswerRepository(jsonParser.parseAnswer("Answer.json"));
+            new InMemoryAnswerRepository(jsonParser.parseAnswer(JsonParser.class.getClassLoader().getResourceAsStream("Answer.json")));
     private final QuestionRepository questionRepository =
-            new InMemoryQuestionRepository(jsonParser.parseQuestion("Questions.json"));
+            new InMemoryQuestionRepository(jsonParser.parseQuestion(JsonParser.class.getClassLoader().getResourceAsStream("Questions.json")));
 
     private final GameService gameService = new GameService(answerRepository, questionRepository);
-
-    public ApplicationContextCreator() {
-    }
 
     public GameService getGameService() {
         return gameService;
@@ -46,6 +45,6 @@ public class ApplicationContextCreator {
     }
 
     public List<Answer> getAnswerListByIdQuestion(Long id) {
-        return getGameService().findAnswersByIdQuestion(id);
+        return gameService.findAnswersByIdQuestion(id);
     }
 }

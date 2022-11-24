@@ -16,14 +16,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GameServiceTest {
 
-    @Mock
+
     GameService gameService;
 
     @Test
     void findAnswersByIdQuestion() {
-        List<Long> list = Arrays.asList(1L, 2L);
-//        Mockito.when(gameService.findAnswersByIdQuestion(1L)).thenReturn(list);
+        Answer answer = new Answer("Ага",1L);
+        List<Answer> expectedAnswerList = Arrays.asList(answer);
 
-//        assertEquals(list, gameService.findAnswersByIdQuestion(1L));
+        Map<Long, Question> actualQuestionMap = new HashMap<>();
+        actualQuestionMap.put(1L, new Question("Ты потерял память.", Arrays.asList(1L), "background.jpg"));
+        QuestionRepository questionRepository = new InMemoryQuestionRepository(actualQuestionMap);
+        Map<Long, Answer> actualAnswerMap = new HashMap<>();
+        actualAnswerMap.put(1L, new Answer("Ага", 1L));
+        AnswerRepository answerRepository = new InMemoryAnswerRepository(actualAnswerMap);
+        gameService = new GameService(answerRepository, questionRepository);
+        gameService.findAnswersByIdQuestion(1L);
+
+        assertEquals(expectedAnswerList, gameService.findAnswersByIdQuestion(1L));
     }
 }

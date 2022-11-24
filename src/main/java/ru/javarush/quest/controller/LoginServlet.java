@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
             currentSession.setAttribute("backgroundPicture", applicationContextCreator.getQuestionBackgroundPicture(1L));
             currentSession.setAttribute("answers", applicationContextCreator.getAnswerListByIdQuestion(1L));
             currentSession.setAttribute("sessionId", currentSession.getId());
-            currentSession.setAttribute("ip", InetAddress.getLocalHost().getHostAddress());
+            currentSession.setAttribute("ip", InetAddress.getLoopbackAddress().getHostAddress());
             currentSession.setAttribute("counter", 0);
             getServletContext().getRequestDispatcher("/quest.jsp").forward(req, resp);
         }

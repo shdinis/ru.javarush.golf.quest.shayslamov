@@ -3,6 +3,7 @@ package ru.javarush.quest.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @ToString
 @Getter
 @JsonTypeName
+@EqualsAndHashCode
 public class Question {
 
     @JsonProperty("questionText")
